@@ -1,0 +1,862 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls static%}
+
+{% block content %} 
+    {{block.super}}
+    {% block fieldsets %}
+        {{block.super}} 
+        <p><a target="_blank" href="/point_picker">Get Building View Coordinates</a></p> 
+        <div id="Building View Dashboard" style="background-color: black; align-content: flex-end;">
+            <!-- <div style="position: relative; width: 0; height: 0"> -->
+                <div id="loading-screen" class="gooey" style="margin-top: 50%; margin-left: 5%">
+                    <span class="dot"></span>
+                    <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+                    <div id="loading" class="annotation" style="margin-top: 30%; left: 5%;">
+                    <h2>LOADING</h2>
+                    </div>                                                                  
+                </div>
+            <!-- </div> -->
+            <div style="position: relative; width: 0; height: 0">
+                <canvas id="number" width="64" height="64">
+            </canvas></div>
+            <div style="position: relative; width: 0; height: 0">
+              <button id="createEdit" class="annotation" style="width: 50px; height: 25px; position: absolute; display: none; z-index: 99; padding: 0px; top: 5px;">Create</button>
+          </div>
+            <div style="position: relative; width: 0; height: 0">
+              <button id="delete" class="annotation" style="width: 50px; height: 25px; position: absolute; display: none; z-index: 99; padding: 0px; top: 5px; left: 55px;">Delete</button>
+          </div>
+            <div style="position: relative; width: 0; height: 0">
+                <button id="placeNode" class="annotation" style="width: 80px; height: 25px; display: none; z-index: 99; padding: 0px; top: 35px;">Place Node</button>
+            </div>
+            <div style="position: relative; width: 0; height: 0">
+                <button id="setCamera" class="annotation" style="width: 80px; height: 25px; position: absolute; display: none; z-index: 99; padding: 0px; top: 35px; left: 85px;">Set Camera</button>
+            </div>
+            <div style="position: relative; width: 0; height: 0">
+                <button id="stacking" class="annotation" style="width: 60px; height: 25px; position: absolute; display: none; z-index: 99; padding: 0px; top: 35px; left: 170px;">Stacking</button>
+            </div>
+            <div style="position: relative; width: 0; height: 0">
+                <button id="save" class="annotation" style="width: 50px; height: 25px; position: absolute; display: none; z-index: 99; padding: 0px; top: 35px; left: 235px;">Save</button>
+            </div>
+            <div style="position: relative; width: 0; height: 0">
+              <button id="exit" class="annotation" style="width: 50px; height: 25px; position: absolute; display: none; z-index: 99; padding: 0px; top: 35px; left: 290px;">Exit</button>
+          </div>
+        </div>
+
+        <style>
+            canvas {
+              width: 100%;
+              height: 100px;
+              display: block;
+            }
+          
+            .annotation {
+              position: absolute;
+              top: -100px;
+              left: 0;
+              z-index: 100;
+              margin-left: 15px;
+              margin-top: 15px;
+              padding: 1em;
+              width: 200px;
+              color: #fff;
+              background: rgba(0, 0, 0, 0.8);
+              border-radius: .5em;
+              font-size: 12px;
+              line-height: 1.2;
+              transition: opacity .5s;
+          
+              &::before {
+                content: '1';
+                position: absolute;
+                top: -30px;
+                left: -30px;
+                width: 30px;
+                height: 30px;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                font-size: 16px;
+                line-height: 30px;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.8);
+              }
+            }
+          
+            #number {
+              position: absolute;
+              z-index: -1;
+            }
+          
+            .gooey {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 142px;
+          height: 40px;
+          margin: -20px 0 0 -71px;
+          background: #000;
+          filter: contrast(20);
+          }
+          .gooey .dot {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: 12px;
+          left: 15px;
+          filter: blur(4px);
+          background: #fff;
+          border-radius: 50%;
+          transform: translateX(0);
+          animation: dot 2.8s infinite;
+          }
+          .gooey .dots {
+          transform: translateX(0);
+          margin-top: 12px;
+          margin-left: 31px;
+          animation: dots 2.8s infinite;
+          }
+          .gooey .dots span {
+          display: block;
+          float: left;
+          width: 16px;
+          height: 16px;
+          margin-left: 16px;
+          filter: blur(4px);
+          background: #fff;
+          border-radius: 50%;
+          }
+          @-moz-keyframes dot {
+          50% {
+            transform: translateX(96px);
+          }
+          }
+          @-webkit-keyframes dot {
+          50% {
+            transform: translateX(96px);
+          }
+          }
+          @-o-keyframes dot {
+          50% {
+            transform: translateX(96px);
+          }
+          }
+          @keyframes dot {
+          50% {
+            transform: translateX(96px);
+          }
+          }
+          @-moz-keyframes dots {
+          50% {
+            transform: translateX(-31px);
+          }
+          }
+          @-webkit-keyframes dots {
+          50% {
+            transform: translateX(-31px);
+          }
+          }
+          @-o-keyframes dots {
+          50% {
+            transform: translateX(-31px);
+          }
+          }
+          @keyframes dots {
+          50% {
+            transform: translateX(-31px);
+          }
+          }
+          
+          </style>
+                  <style>
+                  html, body {
+                      height: 100%;
+                      margin: 0;
+                  }
+                  #map {
+                      width: 100%;
+                      height: 100%;
+                  }
+        </style>
+        <script src="/dashboard/static/js/tween.umd.js"></script>
+        <script type="module">
+
+            // Import libraries
+            import * as THREE from "/dashboard/static/js/three.module.js";      
+            import { OrbitControls } from "/dashboard/static/js/OrbitControls.js";
+            import { DRACOLoader } from "/dashboard/static/js/DRACOLoader.js"; 
+            import { GLTFLoader } from "/dashboard/static/js/GLTFLoader.js";
+            import { RGBELoader } from "/dashboard/static/js/RGBELoader.js";
+          
+            // Initialise canvas and sprite configuration
+            const canvas = document.getElementById("number");
+            const annotation = document.querySelector(".annotation");
+            const ctx = canvas.getContext("2d");
+            const x = 32;
+            const y = 32;
+            const radius = 30;
+            const startAngle = 0;
+            const endAngle = Math.PI * 2;
+          
+            ctx.fillStyle = "rgb(0, 0, 0)";
+            ctx.beginPath();
+            ctx.arc(x, y, radius, startAngle, endAngle);
+            ctx.fill();
+          
+            ctx.strokeStyle = "rgb(255, 255, 255)";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.arc(x, y, radius, startAngle, endAngle);
+            ctx.stroke();
+          
+            ctx.fillStyle = "rgb(255, 255, 255)";
+            ctx.beginPath();
+            ctx.arc(x, y, radius - 20, startAngle, endAngle);
+            ctx.fill();
+          
+            // Declare global variables
+            let camera, scene, renderer, raycaster, mouse, controls, interaction, spriteMaterial, group, marker;
+            let canvasWidth = document.getElementById('Building View Dashboard').clientWidth;
+            let canvasHeight = canvasWidth * 0.5;
+            let isLoaded = false, curType = "AQ", view = 'global', curNode = null, highlightedObj = null;
+            let nodes, cameraData = {}, stacking = false, stack = null, mode = "", isPlaceNode = false, isSetCamera = false;                                 
+          
+            // Get nodes data from JSON
+            fetch("/get_3d_config")
+            .then(response => {
+              return response.json();
+            })
+            .then(data => nodes = data);
+
+            // Render 3D scene
+            init();
+            animate();
+            
+            function init() {
+              
+              // Initialse camera and scene
+              camera = new THREE.PerspectiveCamera(70, canvasWidth / canvasHeight, 1, 1000);
+              camera.position.set(21.66753609215439, 37.35592538606815, 93.40952345429712);
+              camera.quaternion.set(-0.22783558791521463, 0.0024687684302738904, 0.0005776681058831099, 0.9736963162923672);
+              
+              raycaster = new THREE.Raycaster();
+              mouse = new THREE.Vector2();
+              
+              scene = new THREE.Scene();
+              
+              const loadingManager = new THREE.LoadingManager(function () {
+                const loadingScreen = document.getElementById("loading-screen");
+                loadingScreen.style.width = canvasWidth + "px";
+                loadingScreen.style.height = canvasHeight + "px";
+              });
+              
+              // Execute set of functions after model is loaded
+              loadingManager.onLoad = function () {
+                new RGBELoader()
+                .load("/dashboard/static/models/environment.hdr", function (texture) {  
+                  texture.mapping = THREE.EquirectangularReflectionMapping;
+                  
+                  const loader = new THREE.TextureLoader();
+                  loader.load('/dashboard/static/models/background.jpg' , function(texture)
+                  {
+                    scene.background = texture;  
+                  });
+                   
+                  scene.environment = texture;                                                       
+                });
+                
+                // Add a delay to prevent the loading screen from flashing
+                setTimeout(function () {
+                  document.getElementById("loading-screen").remove();
+                  isLoaded = true;
+                  console.log(nodes);
+                  setTimeout(function () {
+                    initSetup();
+                  }, 500);
+                }, 500);  
+              }      
+              
+              
+              // Compress model and load it into the scene    
+              const loader = new GLTFLoader(loadingManager);
+              const dracoLoader = new DRACOLoader();
+              dracoLoader.setDecoderPath('/dashboard/static/js/');
+              loader.setDRACOLoader(dracoLoader);
+              loader.load("/dashboard/static/models/campus.gltf", function (gltf) {
+                
+                scene.add(gltf.scene);
+                
+                render();
+                
+                
+              });
+              
+              // Create a group to hold all the markers/sprites
+              group = new THREE.Group();
+              scene.add(group);
+              
+              const numberTexture = new THREE.CanvasTexture(
+                document.querySelector("#number")
+                );
+                
+                spriteMaterial = new THREE.SpriteMaterial({
+                  map: numberTexture,
+                  alphaTest: 0.5,
+                  transparent: true,
+                  depthTest: false,
+                  depthWrite: false
+                });
+                
+              // Initialise renderer properties and controls (configurable)
+              renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+              renderer.setPixelRatio(window.devicePixelRatio);
+              renderer.setSize(canvasWidth, canvasHeight);
+              renderer.toneMapping = THREE.ACESFilmicToneMapping;
+              renderer.toneMappingExposure = 1;
+              renderer.outputEncoding = THREE.sRGBEncoding;
+              document.getElementById('Building View Dashboard').appendChild(renderer.domElement);
+              
+              renderer.domElement.addEventListener('mousemove', onMouseMove, false);
+              renderer.domElement.addEventListener('mousedown', onMouseDown, false);
+              
+              controls = new OrbitControls(camera, renderer.domElement);
+              controls.addEventListener('change', render); // use if there is no animation loop
+              controls.minDistance = 1;
+              controls.maxDistance = 1000;
+              controls.maxPolarAngle = Math.PI/2; 
+              controls.target.set(21.204829505038834, -7.819649368126377, 2.163054652609467);
+              controls.update();
+              
+              window.addEventListener('resize', onWindowResize);
+              setEventListeners();
+              
+              marker = new THREE.Sprite(spriteMaterial);
+              marker.name = "marker";
+            }
+          
+            function setEventListeners() {
+              // Set event listeners for interaction
+              var button = document.getElementById('placeNode');
+              button.addEventListener('mouseover', onMouseEnter);
+              button.addEventListener('mouseout', onMouseExit);
+              button.addEventListener('click', placeNode);
+              
+              button = document.getElementById('setCamera');
+              button.addEventListener('mouseover', onMouseEnter);
+              button.addEventListener('mouseout', onMouseExit);
+              button.addEventListener('click', setCamera);
+          
+              button = document.getElementById('save');
+              button.addEventListener('mouseover', onMouseEnter);
+              button.addEventListener('mouseout', onMouseExit);
+              button.addEventListener('click', onSave);
+
+              button = document.getElementById('stacking'); 
+              button.addEventListener('click', toggleStacking);
+
+              button = document.getElementById('createEdit');
+              button.addEventListener('mouseover', onMouseEnter);
+              button.addEventListener('mouseout', onMouseExit);
+              button.addEventListener('click', onCreateEdit);
+
+              button = document.getElementById('delete');
+              button.addEventListener('mouseover', onMouseEnter);
+              button.addEventListener('mouseout', onMouseExit);
+              button.addEventListener('click', onDelete);
+
+              button = document.getElementById('exit');
+              button.addEventListener('mouseover', onMouseEnter);
+              button.addEventListener('mouseout', onMouseExit);
+              button.addEventListener('click', onExit);
+
+              var field = document.getElementById('id_node_id');
+              field.addEventListener('keyup', initSetup);
+            }
+          
+            function onWindowResize() {
+              // Update camera and renderer properties on window resize
+              canvasWidth = document.getElementById('Building View Dashboard').clientWidth;
+              canvasHeight = canvasWidth * 0.5;
+              
+              camera.aspect = canvasWidth / canvasHeight;
+              camera.updateProjectionMatrix();
+          
+              renderer.setSize(canvasWidth, canvasHeight);
+          
+              render();
+            }
+
+            // Setup scene
+            function initSetup () {
+              // Check if current node is already present in config.json
+              var id = document.getElementById('id_node_id').value
+              if (id != null)
+              {
+                // Handle for stacked and unstacked nodes
+                var node = null;
+                if(nodes[id] != null)
+                {
+                  node = nodes[id];
+                  node.id = id;
+                }
+                else
+                {
+                  for(var stack in nodes)
+                  {
+                    if(nodes[stack].stacking)
+                    {
+                      for(var i = 0 ; i < nodes[stack].nodes.length ; i++)
+                      {
+                        if(nodes[stack].nodes[i] == id)
+                        {
+                          node = nodes[stack].nodes[i];
+                          stack = stack;
+                          console.log(stack);
+                          break;
+                        }
+                      }
+                    }
+                    if(node != null)
+                    {
+                      break;
+                    }
+                  }
+                }
+
+                if(node != null)
+                {
+                  curNode = node;
+                  if(stack != null)
+                  {
+                    node = nodes[stack];
+                    stacking = true;
+                  }
+                  camera.position.set(node.nodeCamPos.x, node.nodeCamPos.y, node.nodeCamPos.z);
+                  camera.quaternion.set(node.nodeCamRot.x, node.nodeCamRot.y, node.nodeCamRot.z, node.nodeCamRot.w);
+                  controls.target.set(node.position.x, node.position.y, node.position.z);
+                  marker.position.set(node.position.x, node.position.y, node.position.z);
+                  var scaleVector = new THREE.Vector3();
+                  var scaleFactor = 16;
+                  var scale = scaleVector.subVectors(marker.position, camera.position).length() / scaleFactor;
+                  marker.scale.set(scale, scale, scale); 
+                  group.add(marker);                      
+                  controls.update();
+                  mode = "edit";
+                  document.getElementById("createEdit").innerHTML = "Edit";
+                  document.getElementById("createEdit").style.display = 'block';
+                  document.getElementById("delete").style.display = 'block';
+                }
+                else
+                {
+                  mode = "create";
+                  document.getElementById("createEdit").innerHTML = "Create";
+                  document.getElementById("createEdit").style.display = 'block';
+                }
+              }
+            }
+          
+            // Normalize scaling of sprites
+            function updateScreenPosition () {
+              for (var i = 0 ; i <  group.children.length ; i++) {
+                var child = group.children[i];
+                  var scaleVector = new THREE.Vector3();
+                  var scaleFactor = 16;
+                  var scale = scaleVector.subVectors(child.position, camera.position).length() / scaleFactor;
+                  child.scale.set(scale, scale, scale); 
+              }
+            }
+          
+            function onMouseEnter(event) {
+              document.body.style.cursor = 'pointer';
+              this.style.backgroundColor = '#ff0000';
+            }
+          
+            function onMouseExit(event) {
+              if(view == 'global') {
+                document.body.style.cursor = 'default';  
+              }
+              this.style.backgroundColor = '#000000';
+            }
+          
+            function placeNode(event) {
+              if (view == 'global') {
+                view = 'node';
+                this.innerHTML = 'Cancel';
+                document.body.style.cursor = 'crosshair';
+              }
+              else {
+                view = 'global';
+                this.innerHTML = 'Place Node';
+                document.body.style.cursor = 'default';
+              }
+            }
+          
+            // Store camera position and quaternion
+            function setCamera (event) {
+              isSetCamera = true;
+              cameraData['camPos'] = camera.position;
+              cameraData['camQuat'] = camera.quaternion;
+            }
+
+            // Get node type from id
+            function getType (id) {
+                var id_split = id.split('-');
+                if(id_split[0] == 'SR') {
+                    return 'SR-' + id_split[1];
+                }
+                else if(id_split[0] == 'WM') {
+                    return id_split[1];
+                }
+                else{
+                    return id_split[0];
+                }
+            }
+
+            // Create sprites for nodes and stacks of same type
+            function createStacks () {
+              var id = document.getElementById('id_node_id').value;
+              var type = getType(id);
+              
+              for(var node in nodes)
+              {
+                if(nodes[node].type == type)
+                {
+                  var stack = new THREE.Sprite(spriteMaterial);
+                  stack.name = node;
+                  stack.position.set(nodes[node].position.x, nodes[node].position.y, nodes[node].position.z);
+                  var scaleVector = new THREE.Vector3();
+                  var scaleFactor = 16;
+                  var scale = scaleVector.subVectors(stack.position, camera.position).length() / scaleFactor;
+                  stack.scale.set(scale, scale, scale); 
+                  group.add(stack);
+                }
+              }
+            }
+
+            // Delete sprites
+            function deleteStacks () {
+              for(var i = 0; i < group.children.length; i++)
+              {
+                if(group.children[i].name != 'marker')
+                {
+                  group.remove(group.children[i]);
+                  i--;
+                }
+              }
+            }
+
+            function toggleStacking () {
+              if(stacking)
+              {
+                this.style.backgroundColor = '#000000';
+                stacking = false;
+                deleteStacks();
+              }
+              else
+              {
+                this.style.backgroundColor = '#ff0000';
+                stacking = true;
+                group.children = [];
+                createStacks();
+              }
+
+            }
+
+            function onSave (event) {
+              if(!isPlaceNode)
+              {
+                alert("Node position has not been set");
+              }
+              else if(!isSetCamera)
+              {
+                alert("Camera has not been set");
+              }
+              else {
+                var id = document.getElementById('id_node_id').value;
+                var type = getType(id);
+
+                if(stacking)
+                {
+                  var id_split = id.split('-');
+                  var stack_id = id_split[0];
+                  for (var i = 1 ; i < id_split.length - 1 ; i++) {
+                    stack_id = stack_id + "-" + id_split[i];
+                  }
+
+                  var arr = [];
+                  if(nodes[stack_id] != null)
+                  {
+                    arr = nodes[stack_id].nodes
+                  }
+                  else
+                  {
+                    delete nodes[marker.name];
+                    arr.push(marker.name);
+                  }
+                  arr.push(id);
+
+                  nodes[stack_id] = {
+                    "type": type,
+                    "position": marker.position,
+                    'nodeCamPos': cameraData['camPos'],
+                    'nodeCamRot': cameraData['camQuat'],
+                    "nodes": arr,
+                    "stacking": true
+                  }
+                }
+                else {
+                  if(stack != null)
+                  {
+                    delete nodes[stack.name]
+                  }
+                  nodes[id] = {
+                      'type': type,
+                      'position': marker.position,
+                      'nodeCamPos': cameraData['camPos'],
+                      'nodeCamRot': cameraData['camQuat']
+                  };
+                  curNode = nodes[id];
+                }
+
+                fetch("/save_3d_config/", {
+                  method: "POST",
+                  credentials: "same-origin",
+                  headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Accept": "application/json",
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(nodes)
+                }).then(res => {
+                  console.log("Request complete! response:", res);
+                });
+
+                alert("Saved!");
+
+                mode = "edit";
+                onExit();
+              }
+            }
+
+            
+            function onCreateEdit () {
+              this.style.pointerEvents = 'none';
+              this.style.backgroundColor = '#ff0000';
+              
+              var button = document.getElementById('delete');
+              button.style.pointerEvents = 'none';
+
+              button = document.getElementById('placeNode');
+              button.style.display = 'block';
+              
+              button = document.getElementById('setCamera');
+              button.style.display = 'block';
+
+              button = document.getElementById('stacking');
+              button.style.display = 'block';
+              if(stacking)
+              {
+                button.style.backgroundColor = '#ff0000';
+                group.children = [];
+                createStacks();
+              }
+              
+              button = document.getElementById('save');
+              button.style.display = 'block';
+              
+              button = document.getElementById('exit');
+              button.style.display = 'block';
+            }
+            
+            function onExit (event) {
+              var button = document.getElementById('createEdit');
+              button.style.pointerEvents = 'auto';
+              button.style.backgroundColor = '#000000';
+              
+              button = document.getElementById('delete');
+              button.style.pointerEvents = 'auto';
+
+              button = document.getElementById('placeNode');
+              button.style.display = 'none';
+              
+              button = document.getElementById('setCamera');
+              button.style.display = 'none';
+              cameraData = {};
+
+              button = document.getElementById('stacking');
+              button.style.display = 'none';
+              stacking = false;
+              
+              button = document.getElementById('save');
+              button.style.display = 'none';
+              
+              button = document.getElementById('exit');
+              button.style.display = 'none';
+
+              if(mode == "edit")
+              {
+                var node = curNode;
+                camera.position.set(node.nodeCamPos.x, node.nodeCamPos.y, node.nodeCamPos.z);
+                camera.quaternion.set(node.nodeCamRot.x, node.nodeCamRot.y, node.nodeCamRot.z, node.nodeCamRot.w);
+                controls.target.set(node.position.x, node.position.y, node.position.z);
+                marker.position.set(node.position.x, node.position.y, node.position.z);
+                var scaleVector = new THREE.Vector3();
+                var scaleFactor = 16;
+                var scale = scaleVector.subVectors(marker.position, camera.position).length() / scaleFactor;
+                marker.scale.set(scale, scale, scale); 
+                group.add(marker);                      
+                controls.update();
+              }
+              else
+              {
+                camera.position.set(21.66753609215439, 37.35592538606815, 93.40952345429712);
+                camera.quaternion.set(-0.22783558791521463, 0.0024687684302738904, 0.0005776681058831099, 0.9736963162923672);
+                controls.target.set(21.204829505038834, -7.819649368126377, 2.163054652609467);                   
+                controls.update();
+                group.remove(marker);
+              }
+            }
+
+            function onDelete () {
+              var node = curNode;
+              if(node.stacking)
+              {
+                var id_split = node.id.split('-');
+                var stack_id = id_split[0];
+                for (var i = 1 ; i < id_split.length - 1 ; i++) {
+                  stack_id = stack_id + "-" + id_split[i];
+                }
+                var arr = nodes[stack_id].nodes;
+                var index = arr.indexOf(node.id);
+                if(index > -1)
+                {
+                  arr.splice(index, 1);
+                }
+                if(arr.length == 0)
+                {
+                  delete nodes[stack_id];
+                }
+                else
+                {
+                  nodes[stack_id].nodes = arr;
+                }
+              }
+              else
+              {
+                delete nodes[node.id];
+              }
+
+              fetch("/save_3d_config/", {
+                  method: "POST",
+                  credentials: "same-origin",
+                  headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Accept": "application/json",
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(nodes)
+                }).then(res => {
+                  console.log("Request complete! response:", res);
+                });
+
+              alert("Deleted!");
+
+              mode = "create";
+              curNode = null;
+              var button = document.getElementById('delete');
+              button.style.display = 'none';
+              button = document.getElementById('createEdit');
+              button.innerHTML = "Create";
+              camera.position.set(21.66753609215439, 37.35592538606815, 93.40952345429712);
+              camera.quaternion.set(-0.22783558791521463, 0.0024687684302738904, 0.0005776681058831099, 0.9736963162923672);
+              controls.target.set(21.204829505038834, -7.819649368126377, 2.163054652609467);                   
+              controls.update();
+              group.remove(marker);
+            }
+
+            function onMouseMove(event) {
+          
+              event.preventDefault();
+              if(stacking)
+              {
+                mouse.x = ( event.offsetX / canvasWidth ) * 2 - 1;
+                mouse.y = - ( event.offsetY / canvasHeight ) * 2 + 1;
+                
+                raycaster.setFromCamera(mouse, camera);
+                
+                let intersects = raycaster.intersectObjects(scene.children);
+                if(intersects.length > 0 && intersects[0].object.type == 'Sprite')
+                {
+                  stack = intersects[0].object;
+                  document.body.style.cursor = 'pointer';
+                }
+              }
+            }
+          
+            function onMouseDown(event) {
+          
+            event.preventDefault();
+          
+              if(view == 'node')
+              {
+                mouse.x = ( event.offsetX / canvasWidth ) * 2 - 1;
+                mouse.y = - ( event.offsetY / canvasHeight ) * 2 + 1;
+                
+                raycaster.setFromCamera(mouse, camera);
+                
+                let intersects = raycaster.intersectObjects(scene.children);
+                
+                if (intersects.length < 1) return;
+                
+                let obj = intersects[0];
+                marker.position.set(obj.point.x, obj.point.y, obj.point.z);
+                var scaleVector = new THREE.Vector3();
+                var scaleFactor = 16;
+                var scale = scaleVector.subVectors(marker.position, camera.position).length() / scaleFactor;
+                marker.scale.set(scale, scale, scale); 
+                group.add(marker);
+                view = 'global';
+                document.getElementById('placeNode').innerHTML = 'Place Node';
+                document.body.style.cursor = 'default';
+                isPlaceNode = true;
+              }
+              else if(stacking)
+              {
+                if(stack != null)
+                {
+                  isPlaceNode = true;
+                  marker = stack;
+                  document.body.style.cursor = 'default';
+                  var node = stack.name;
+                  camera.position.set(nodes[node].nodeCamPos.x, nodes[node].nodeCamPos.y, nodes[node].nodeCamPos.z);
+                  camera.quaternion.set(nodes[node].nodeCamRot.x, nodes[node].nodeCamRot.y, nodes[node].nodeCamRot.z, nodes[node].nodeCamRot.w);
+                  controls.target.set(nodes[node].position.x, nodes[node].position.y, nodes[node].position.z);
+                  controls.update();
+                  setCamera();
+                }
+              }
+            
+            render()
+            }
+          
+            // animate function
+            function animate() {
+              requestAnimationFrame(animate);
+              // controls.update();
+              render();
+            }
+          
+          
+            function render() {
+              if (isLoaded)
+              {
+                renderer.render(scene, camera);
+                updateScreenPosition();
+              }
+            }
+          
+          </script>
+    {% endblock %}
+{% endblock %}

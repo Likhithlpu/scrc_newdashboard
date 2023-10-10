@@ -1,0 +1,1791 @@
+[
+  {
+    "nodeId": "WN-LP03-02",
+    "name": "VinhdyaA2-A4(79F)",
+    "latitude": 17.445343,
+    "longitude": 78.350022,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP02-02",
+    "name": "VinhdyaA2(79E&79D)",
+    "latitude": 17.445146,
+    "longitude": 78.350022,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP04-02",
+    "name": "VinhdyaA4(79B&79C)",
+    "latitude": 17.445564,
+    "longitude": 78.349507,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP05-02",
+    "name": "VinhdyaA6(I)",
+    "latitude": 17.445802,
+    "longitude": 78.349192,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP01-03",
+    "name": "SmartPoll",
+    "latitude": 17.44507,
+    "longitude": 78.349856,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP06-01",
+    "name": "Pole26",
+    "latitude": 17.44541,
+    "longitude": 78.350954,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP07-01",
+    "name": "Pole25",
+    "latitude": 17.445241,
+    "longitude": 78.350744,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP08-01",
+    "name": "Pole22",
+    "latitude": 17.445032,
+    "longitude": 78.350564,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP09-01",
+    "name": "Pole21",
+    "latitude": 17.444882,
+    "longitude": 78.35041,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP10-01",
+    "name": "Pole20",
+    "latitude": 17.444693,
+    "longitude": 78.350241,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP11-01",
+    "name": "Pole19",
+    "latitude": 17.444449,
+    "longitude": 78.350024,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP12-01",
+    "name": "Pole18",
+    "latitude": 17.444275,
+    "longitude": 78.349894,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP13-01",
+    "name": "Pole66",
+    "latitude": 17.444442,
+    "longitude": 78.349712,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP14-01",
+    "name": "Pole65",
+    "latitude": 17.444572,
+    "longitude": 78.34956,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP15-01",
+    "name": "Pole64",
+    "latitude": 17.444763,
+    "longitude": 78.349306,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP16-01",
+    "name": "Pole63",
+    "latitude": 17.444882,
+    "longitude": 78.349172,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP17-01",
+    "name": "Pole62",
+    "latitude": 17.445018,
+    "longitude": 78.348979,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP18-01",
+    "name": "Pole61",
+    "latitude": 17.445146,
+    "longitude": 78.348844,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP19-01",
+    "name": "Pole60",
+    "latitude": 17.445326,
+    "longitude": 78.348596,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP20-01",
+    "name": "Pole59",
+    "latitude": 17.445435,
+    "longitude": 78.348418,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP21-01",
+    "name": "Pole67",
+    "latitude": 17.445764,
+    "longitude": 78.348406,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP22-01",
+    "name": "Pole78",
+    "latitude": 17.445964,
+    "longitude": 78.348601,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP23-01",
+    "name": "Pole77",
+    "latitude": 17.446134,
+    "longitude": 78.348763,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP24-01",
+    "name": "Pole80",
+    "latitude": 17.446267,
+    "longitude": 78.348872,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP25-01",
+    "name": "Pole81",
+    "latitude": 17.446471,
+    "longitude": 78.349039,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP26-01",
+    "name": "Pole82",
+    "latitude": 17.446943,
+    "longitude": 78.349084,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP27-01",
+    "name": "Pole83",
+    "latitude": 17.446703,
+    "longitude": 78.349253,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP28-01",
+    "name": "Pole84",
+    "latitude": 17.446915,
+    "longitude": 78.349451,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP29-01",
+    "name": "Pole38",
+    "latitude": 17.446889,
+    "longitude": 78.349611,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "WN-LP30-01",
+    "name": "Pole37",
+    "latitude": 17.44671,
+    "longitude": 78.349837,
+    "xcor": 342,
+    "ycor": 618,
+    "type": "WN"
+  },
+  {
+    "nodeId": "AQ-SN00-00",
+    "name": "Sahana Atidhi Nivas",
+    "latitude": 17.445604,
+    "longitude": 78.347483,
+    "xcor": 610,
+    "ycor": 800,
+    "type": "AQ"
+  },
+  {
+    "nodeId": "AQ-PL00-00",
+    "name": "Palash Nivas",
+    "latitude": 17.44509,
+    "longitude": 78.34605,
+    "xcor": 650,
+    "ycor": 490,
+    "type": "AQ"
+  },
+
+  {
+    "nodeId": "AQ-BN00-00",
+    "name": "Bakul Nivas",
+    "latitude": 17.448056,
+    "longitude": 78.348444,
+    "xcor": 600,
+    "ycor": 1600,
+    "type": "AQ"
+  },
+
+  {
+    "nodeId": "AQ-KN00-00",
+    "name": "Kadamba Nivas",
+    "latitude": 17.44661,
+    "longitude": 78.34718,
+    "xcor": 670,
+    "ycor": 1100,
+    "type": "AQ"
+  },
+  {
+    "nodeId": "AQ-MG00-00",
+    "name": "Main Gate",
+    "latitude": 17.44599,
+    "longitude": 78.35142,
+    "xcor": 30,
+    "ycor": 1100,
+    "type": "AQ"
+  },
+  {
+    "nodeId": "AQ-KH00-00",
+    "name": "Kohli Research Block",
+    "latitude": 17.44487,
+    "longitude": 78.34952,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "AQ"
+  },
+  {
+    "nodeId": "AQ-PH00-00",
+    "name": "Pump House 3",
+    "latitude": 17.443299,
+    "longitude": 78.348365,
+    "xcor": 17.445604,
+    "ycor": 78.347483,
+    "type": "AQ"
+  },
+  {
+    "nodeId": "AQ-FG00-00",
+    "name": "Football Ground",
+    "latitude": 17.44697,
+    "longitude": 78.34854,
+    "xcor": 550,
+    "ycor": 1100,
+    "type": "AQ"
+  },
+  {
+    "nodeId": "AQ-VN90-00",
+    "name": "Vindhya Library ",
+    "latitude": 17.445825,
+    "longitude": 78.349215,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "AQ"
+  },
+  {
+    "nodeId": "AQ-AN00-00",
+    "name": "Anand Nivas",
+    "latitude": 17.443936,
+    "longitude": 78.348436,
+    "xcor": 550,
+    "ycor": 200,
+    "type": "AQ"
+  },
+  {
+    "nodeId": "WM-WD-VN90-00",
+    "name": "Library",
+    "latitude": 17.44593,
+    "longitude": 78.34917,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "WD"
+  },
+  {
+    "nodeId": "WM-WD-VN01-00",
+    "name": "SPCRC",
+    "latitude": 17.445467,
+    "longitude": 78.350027,
+    "xcor": 370,
+    "ycor": 650,
+    "type": "WD"
+  },
+  {
+    "nodeId": "WM-WD-PH01-00",
+    "name": "Pump House 1",
+    "latitude": 17.445793,
+    "longitude": 78.351444,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "WD"
+  },
+  {
+    "nodeId": "WM-WD-VN00-00",
+    "name": "Vindhya",
+    "latitude": 17.445402,
+    "longitude": 78.349875,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "WD"
+  },
+  {
+    "nodeId": "WM-WD-VN01-01",
+    "name": "Vindhya",
+    "latitude": 17.445369,
+    "longitude": 78.349937,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "WD"
+  },
+  {
+    "nodeId": "WM-WD-BN04-00",
+    "name": "Bakul Nivas",
+    "latitude": 17.443674,
+    "longitude": 78.3483606,
+    "xcor": 600,
+    "ycor": 1600,
+    "type": "WD"
+  },
+  {
+    "nodeId": "WM-WF-PH03-00",
+    "name": "Pump House 3",
+    "latitude": 17.443299,
+    "longitude": 78.348365,
+    "xcor": 480,
+    "ycor": 213,
+    "type": "WF"
+  },
+
+  {
+    "nodeId": "WM-WF-PH03-01",
+    "name": "Pump House 3",
+    "latitude": 17.443299,
+    "longitude": 78.348365,
+    "xcor": 480,
+    "ycor": 213,
+    "type": "WF"
+  },
+
+  {
+    "nodeId": "WM-WF-PH03-02",
+    "name": "Pump House 3",
+    "latitude": 17.443299,
+    "longitude": 78.348365,
+    "xcor": 480,
+    "ycor": 213,
+    "type": "WF"
+  },
+
+  {
+    "nodeId": "WM-WF-PH03-03",
+    "name": "Pump House 3",
+    "latitude": 17.443299,
+    "longitude": 78.348365,
+    "xcor": 480,
+    "ycor": 213,
+    "type": "WF"
+  },
+
+  {
+    "nodeId": "WM-WF-VN01-00",
+    "name": "Vindhya Nivas c4",
+    "latitude": 17.445369,
+    "longitude": 78.349937,
+    "xcor": 370,
+    "ycor": 650,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-PH01-00",
+    "name": "Pump House 1",
+    "latitude": 17.445793,
+    "longitude": 78.351444,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-PH02-70",
+    "name": "Pump House 2",
+    "latitude": 17.446267,
+    "longitude": 78.349436,
+    "xcor": 902,
+    "ycor": 371,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-PH03-70",
+    "name": "Pump House 3",
+    "latitude": 17.443129,
+    "longitude": 78.349436,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-KB04-70",
+    "name": "Kohli Block",
+    "latitude": 17.444958,
+    "longitude": 78.349694,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-KB04-71",
+    "name": "Kohli Block",
+    "latitude": 17.444973,
+    "longitude": 78.349673,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-KB04-72",
+    "name": "Kohli Block",
+    "latitude": 17.445046,
+    "longitude": 78.349719,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-KB04-73",
+    "name": "Kohli Block",
+    "latitude": 17.445016,
+    "longitude": 78.349753,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-PL00-70",
+    "name": "Palash Nivas",
+    "latitude": 17.444881,
+    "longitude": 78.346202,
+    "xcor": 520,
+    "ycor": 211,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-PL00-71",
+    "name": "Palash Nivas",
+    "latitude": 17.444881,
+    "longitude": 78.346202,
+    "xcor": 520,
+    "ycor": 211,
+    "type": "WF"
+  },
+  {
+    "nodeId": "WM-WF-PR00-70",
+    "name": "Parijat Nivas",
+    "latitude": 17.447324,
+    "longitude": 78.347749,
+    "xcor": 1007,
+    "ycor": 229,
+    "type": "WF"
+  },
+
+  {
+    "nodeId": "WE-VN04-00",
+    "name": "Vindhya",
+    "latitude": 17.445825,
+    "longitude": 78.349215,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "WE"
+  },
+  {
+    "nodeId": "WE-BN04-00",
+    "name": "Bakul Nivas",
+    "latitude": 17.443674,
+    "longitude": 78.3483606,
+    "xcor": 600,
+    "ycor": 1600,
+    "type": "WE"
+  },
+  {
+    "nodeId": "SR-AC-KH00-00",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH00-01",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH00-02",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH00-03",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH00-04",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH00-05",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH00-06",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH00-07",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH00-08",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-00",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-01",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-02",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-03",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-04",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-05",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-06",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-07",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-08",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-09",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-10",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-11",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-12",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-13",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-14",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-15",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-16",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-17",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-18",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH01-19",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-00",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-01",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-02",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-03",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-04",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-05",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-06",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-07",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-08",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-09",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-10",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-11",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-12",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-13",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-14",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-15",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-16",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-17",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-18",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-19",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-20",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-21",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-22",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-23",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH02-24",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-00",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-01",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-02",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-03",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-04",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-05",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-06",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-07",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-08",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-09",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-10",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-11",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-12",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-13",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-14",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-15",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-16",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-17",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-18",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-19",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-20",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-AC-KH03-21",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AC"
+  },
+  {
+    "nodeId": "SR-EM-KH04-00",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-EM"
+  },
+  {
+    "nodeId": "SR-EM-KH04-01",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-EM"
+  },
+  {
+    "nodeId": "SR-EM-KH04-02",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-EM"
+  },
+  {
+    "nodeId": "SR-OC-GW-KH00-00",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-OC"
+  },
+  {
+    "nodeId": "SR-AQ-KH00-00",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH00-01",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH00-02",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH00-03",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH01-00",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH01-01",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH01-02",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH01-03",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH01-04",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-00",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-01",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-02",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-03",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-04",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-05",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-06",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-07",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-08",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SR-AQ-KH02-09",
+    "name": "Kohli Block",
+    "latitude": 17.44511,
+    "longitude": 78.34974,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "SR-AQ"
+  },
+  {
+    "nodeId": "SL-VN03-00",
+    "name": "Vindhya",
+    "latitude": 17.445825,
+    "longitude": 78.349215,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "SL"
+  },
+  {
+    "nodeId": "SL-VN02-01",
+    "name": "Vindhya",
+    "latitude": 17.4472857,
+    "longitude": 78.3495513,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "SL"
+  },
+  {
+    "nodeId": "SL-VN02-00",
+    "name": "Vindhya",
+    "latitude": 17.445484,
+    "longitude": 78.3496514,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "SL"
+  },
+  {
+    "nodeId": "EM-NC-VN01-00",
+    "name": "Vindhya",
+    "latitude": 17.4464517,
+    "longitude": 78.3494681,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-VN01-01",
+    "name": "Vindhya",
+    "latitude": 17.4464517,
+    "longitude": 78.3494681,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-VN92-00",
+    "name": "Vindhya",
+    "latitude": 17.4461651,
+    "longitude": 78.3500722,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-VN93-00",
+    "name": "Vindhya",
+    "latitude": 17.4460269,
+    "longitude": 78.3500387,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-VN95-00",
+    "name": "Vindhya",
+    "latitude": 17.4460269,
+    "longitude": 78.3500387,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-BN01-00",
+    "name": "Bakul Nivas",
+    "latitude": 17.448011,
+    "longitude": 78.3484747,
+    "xcor": 600,
+    "ycor": 1600,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-NI93-00",
+    "name": "Nilgiri",
+    "latitude": 17.4472859,
+    "longitude": 78.3489923,
+    "xcor": 610,
+    "ycor": 1410,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-SM00-00",
+    "name": "South Mess",
+    "latitude": 17.4447654,
+    "longitude": 78.3457284,
+    "xcor": 610,
+    "ycor": 800,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-NM00-00",
+    "name": "North Mess",
+    "latitude": 17.4447654,
+    "longitude": 78.3457284,
+    "xcor": 610,
+    "ycor": 800,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-PL92-00",
+    "name": "Palash Nivas",
+    "latitude": 17.4453012,
+    "longitude": 78.346465,
+    "xcor": 650,
+    "ycor": 490,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-PL92-01",
+    "name": "Palash Nivas",
+    "latitude": 17.4450136,
+    "longitude": 78.3456231,
+    "xcor": 650,
+    "ycor": 490,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-PL98-00",
+    "name": "Palash Nivas",
+    "latitude": 17.4451835,
+    "longitude": 78.346175,
+    "xcor": 650,
+    "ycor": 490,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-KN98-00",
+    "name": "Kohli Block",
+    "latitude": 17.4468582,
+    "longitude": 78.3469156,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-CR-KN95-00",
+    "name": "Kohli Block",
+    "latitude": 17.446641,
+    "longitude": 78.3471996,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-CR-KN95-01",
+    "name": "Kohli Block",
+    "latitude": 17.4468582,
+    "longitude": 78.3469156,
+    "xcor": 490,
+    "ycor": 600,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-CR-PR01-01",
+    "name": "Pump House",
+    "latitude": 17.447222,
+    "longitude": 78.347764,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-SN00-00",
+    "name": "Sahana Athidi Nivas",
+    "latitude": 17.4457582,
+    "longitude": 78.3473032,
+    "xcor": 610,
+    "ycor": 800,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-CR-TG00-00",
+    "name": "Tarangini Electrical Room",
+    "latitude": 17.4481002,
+    "longitude": 78.3480737,
+    "xcor": 40,
+    "ycor": 110,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-CR-TG00-01",
+    "name": "Tarangini Electrical Room",
+    "latitude": 17.4481002,
+    "longitude": 78.3480737,
+    "xcor": 40,
+    "ycor": 110,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-PH01-00",
+    "name": "Pump House",
+    "latitude": 17.445133,
+    "longitude": 78.352036,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-PH04-00",
+    "name": "Pump House",
+    "latitude": 17.447805,
+    "longitude": 78.3494389,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-AR00-00",
+    "name": "AR",
+    "latitude": 17.4468582,
+    "longitude": 78.3469156,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-DC00-00",
+    "name": "DayCare Center",
+    "latitude": 17.4468582,
+    "longitude": 78.3469156,
+    "xcor": 600,
+    "ycor": 700,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-SC00-00",
+    "name": "Srujana Cultural Center",
+    "latitude": 17.4463445,
+    "longitude": 78.3477427,
+    "xcor": 580,
+    "ycor": 800,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-SS00-00",
+    "name": "Sanskar School",
+    "latitude": 17.4465895,
+    "longitude": 78.3479191,
+    "xcor": 610,
+    "ycor": 950,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-DH00-00",
+    "name": "Kadamb Mess",
+    "latitude": 17.4470684,
+    "longitude": 78.3475057,
+    "xcor": 700,
+    "ycor": 850,
+    "type": "EM"
+  },
+  {
+    "nodeId": "EM-NC-YM00-00",
+    "name": "Yuktahar Mess",
+    "latitude": 17.4470684,
+    "longitude": 78.3475057,
+    "xcor": 40,
+    "ycor": 1100,
+    "type": "EM"
+  },
+  {
+    "nodeId": "CM-VN91-01",
+    "name": "Vindhya",
+    "latitude": 17.4457,
+    "longitude": 78.34956,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "CM"
+  },
+  {
+    "nodeId": "CM-VN90-00",
+    "name": "Vindhya",
+    "latitude": 17.44593,
+    "longitude": 78.34917,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "CM"
+  },
+  {
+    "nodeId": "CM-VN90-01",
+    "name": "Vindhya",
+    "latitude": 17.44563,
+    "longitude": 78.34968,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "CM"
+  },
+  {
+    "nodeId": "CM-MG00-00",
+    "name": "Main Gate",
+    "latitude": 17.44585,
+    "longitude": 78.35075,
+    "xcor": 30,
+    "ycor": 1100,
+    "type": "CM"
+  },
+  {
+    "nodeId": "CM-VN91-00",
+    "name": "Vindhya Nivas",
+    "latitude": 17.44576,
+    "longitude": 78.3495,
+    "xcor": 470,
+    "ycor": 900,
+    "type": "CM"
+  },
+  {
+    "nodeId": "CM-MG99-00",
+    "name": "Main Gate",
+    "latitude": 17.44547,
+    "longitude": 78.35137,
+    "xcor": 30,
+    "ycor": 1100,
+    "type": "CM"
+  }
+]

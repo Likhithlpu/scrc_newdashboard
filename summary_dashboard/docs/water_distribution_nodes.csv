@@ -1,0 +1,5 @@
+Library 	WM-WD-VN90-00 	17.44593	78.34917	https://onem2m.iiit.ac.in/~/mn-cse9/water-monitoring/AE-WM-WD/WM-WD-VN90-00 	['Timestamp', 'Temperature', 'TDS Voltage', 'Uncompensated TDS value', 'Compensated TDS value', 'Water Level']
+SPCRC 	WM-WD-VN01-00 	17.445467	78.350027	https://onem2m.iiit.ac.in/~/mn-cse9/water-monitoring/AE-WM-WD/WM-WD-VN01-00 	['Timestamp', 'Temperature', 'TDS Voltage', 'Uncompensated TDS value', 'Compensated TDS value', 'Water Level']
+Main Gate 	WM-WD-PH01-00 	17.445793	78.351444	https://onem2m.iiit.ac.in/~/mn-cse9/water-monitoring/AE-WM-WD/WM-WD-PH01-00 	['Timestamp', 'Temperature', 'TDS Voltage', 'Uncompensated TDS value', 'Compensated TDS value', 'Water Level']
+Vindhya 	WM-WD-VN00-00 	17.445402	78.349875	https://onem2m.iiit.ac.in/~/mn-cse9/water-monitoring/AE-WM-WD/WM-WD-VN00-00 	['Timestamp', 'Temperature', 'TDS Voltage', 'Uncompensated TDS value', 'Compensated TDS value', 'Water Level']
+Beside Building Science 	WM-WD-VN01-01 	17.445369	78.349937	https://onem2m.iiit.ac.in/~/mn-cse9/water-monitoring/AE-WM-WD/WM-WD-VN01-01 	['Timestamp', 'Temperature', 'TDS Voltage', 'Uncompensated TDS value', 'Compensated TDS value', 'Water Level']

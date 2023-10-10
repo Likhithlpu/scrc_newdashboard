@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+   message-broker:
+      image: redis:7.0-alpine
+      command: redis-server --save 20 1 --loglevel warning
+      volumes:
+         - cache:/data
+      restart: always
+
+   dashboard:
+      image: registry.gitlab.com/scrc-iiit/summary-dashboard/dashboard
+      volumes:
+         - /vol/dashboard:/workspace/storage/
+      env_file:
+         - stack.env
+      restart: always
+      network_mode: host
+
+   dashboard-huey:
+      image: registry.gitlab.com/scrc-iiit/summary-dashboard/dashboard
+      command: python smart_city_dashboard/manage.py run_huey
+      env_file:
+         - stack.env
+      restart: always
+      network_mode: host
+      depends_on:
+         - dashboard
+
+volumes:
+   cache:

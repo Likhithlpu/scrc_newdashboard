@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+    <meta http-equiv="refresh" content="60">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/style.css' %} ">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" href="{% static 'images/smartCity_livingLab.png' %}">
+    <style>
+
+        .outline-style {
+            background-color: black;
+        }
+        
+        .leftbox1 { grid-area: leftbox1; }
+        .leftbox2 { grid-area: leftbox2; }
+        .rightbox1 { grid-area: rightbox1; }
+        .rightbox2 { grid-area: rightbox2; }
+        .rightbox3 { grid-area: rightbox3; }
+        .logobox { grid-area: logobox; }
+        .statsbox { grid-area: statsbox;}
+
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'leftbox1 leftbox1 logobox logobox rightbox1 rightbox1'
+                'leftbox1 leftbox1 logobox logobox rightbox1 rightbox1'
+                'leftbox1 leftbox1 logobox logobox rightbox1 rightbox1'
+                'leftbox1 leftbox1 statsbox statsbox rightbox1 rightbox1'
+                'leftbox1 leftbox1 statsbox statsbox rightbox2 rightbox2'
+                'leftbox1 leftbox1 statsbox statsbox rightbox2 rightbox2'
+                'leftbox2 leftbox2 statsbox statsbox rightbox2 rightbox2'
+                'leftbox2 leftbox2 statsbox statsbox rightbox2 rightbox2'
+                'leftbox2 leftbox2 statsbox statsbox rightbox3 rightbox3'
+                'leftbox2 leftbox2 statsbox statsbox rightbox3 rightbox3'
+                'leftbox2 leftbox2 statsbox statsbox rightbox3 rightbox3'
+                'leftbox2 leftbox2 statsbox statsbox rightbox3 rightbox3';
+            gap: 1.2rem;
+            padding: 1.5rem;
+        }
+
+        .leftbox1, .leftbox2, .rightbox1, .rightbox2, .rightbox3, .logobox, .statsbox {
+            background-color: #242124;
+            gap: 0.5rem;
+            padding: 1.2rem;
+        }
+
+        .logobox {
+            text-align: center;
+            background-color: black;
+        }
+        .logobox img {
+            width: 15rem;
+            height: 9rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .logo {grid-area: logo;}
+        .heading {grid-area: heading;}
+        .info {grid-area: info;}
+
+        .leftbox1, .leftbox2, .rightbox1, .rightbox2, .rightbox3 {
+            display: grid;
+            grid-template-areas: 
+                'logo heading heading heading heading heading heading heading heading heading heading heading heading'
+                'info info info info info info info info info info info info info'
+                'info info info info info info info info info info info info info';
+        }
+        .heading {
+            text-align: left;
+            padding-top: 2rem;
+        }
+
+        .link {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        hr.new1 {
+            border-top: 1px solid red;
+            position: absolute;
+        }
+
+        #stats_nodes {
+            font-size: 1.2rem;
+        }
+
+        .info{
+            color: white;
+            float: left;
+            text-align: left;
+            padding-left: 1rem;
+        }
+
+        .node_values {
+            font-size: 2.1rem;
+        }
+
+    </style>
+
+</head>
+
+<script>
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', afterLoaded);
+    } else {
+        //The DOMContentLoaded event has already fired. Just run the code.
+        afterLoaded();
+    }
+    function afterLoaded() {
+        loadHomeData('{{result|safe}}');
+    }
+
+    function loadHomeData(result) {
+	console.log(result)
+        params = {
+            we: ["temperature", "relative_humidity", "solar_radiation"],
+            aq: ["pm10", "pm25", "aqi"],
+            wd: ["compensated_tds_value"],
+            wf: ["total_flow"],
+            sl: ["eac_today"]
+        }
+        disc = {
+            temperature: "Temperature",
+            relative_humidity: "rHumidity",
+            solar_radiation: "Solar Radiation",
+            aqi: "AQI",
+            pm10: "PM10",
+            pm25: "PM2.5",
+            total_flow: "Total Flow",
+            eac_today: "Energy Generated",
+            compensated_tds_value: "TDS"
+        }
+        units = {
+            temperature: "°C",
+            relative_humidity: "%",
+            solar_radiation: "W/m²",
+            aqi: "",
+            pm10: "ppm",
+            pm25: "ppm",
+            total_flow: "m³",
+            eac_today: "kWh",
+            compensated_tds_value: "ppm"
+        }
+
+        verticals = ['we', 'aq', 'wd', 'wf', 'we', 'sl', 'em', 'sr', 'sr_ac', 'sr_oc', 'sr_aq', 'sr_em']
+
+        result = JSON.parse(result);
+        const states_element = document.getElementById('stats_nodes')
+
+        for (v in verticals) {
+            vertical = verticals[v]
+            vertical_json = result[vertical]
+            const para = document.createElement("p")
+            para.innerText = result[vertical]["name"] + ": " + result[vertical]["nodes"]
+            if (para != null) {
+                states_element.appendChild(para)
+            }
+
+            nodes_text = document.getElementById(vertical + "_text")
+            if (nodes_text && nodes_text !== null) {
+                temp = ''
+                for (p in params[vertical]) {
+                    param = params[vertical][p]
+                    temp += disc[param] + ": " + result[param] + " " + units[param] + "\n"
+                }
+                nodes_text.innerText = temp
+            }
+        }
+    }
+</script>
+
+<body style="overflow-x:hidden ; background-color:black; color:white">
+    <nav class="navbar navbar-expand-md navbar-dark"
+        style="  width: 100%;  z-index: 9999; position: relative; background-color: #123462; color: #ffffff; padding: 1vh;">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="/home" style="color: #ffffff; padding-left:10px;">
+                <div style='display:flex'>
+                    <img src="{% static 'images/smartCity_livingLab.png' %}" height="50" border: 10px;>
+                    <h2 id="title" style='margin-left:1vw'>
+                        Dashboard
+                    </h2>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item dropdown btnstyle">
+                        <a class="nav-link dropdown-toggle" href="#" id="currentviewtypehome" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SUMMARY VIEW
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink"
+                            id="listofviewshome">
+                            <a class="dropdown-item" href="/loadmaps" id="map_view_home">MAP VIEW</a>
+                            <a class="dropdown-item" href="/building" id="building_view_home">BUILDING VIEW</a>
+                            <a class="dropdown-item" href="/home" id="grafana_view_home">SUMMARY VIEW</a>
+                            <a class="dropdown-item" href="/3d" id="3d_view">3D VIEW</a>
+			</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="grid-container">
+        <div class="leftbox1">
+            <div class="logo"><img class="icon" src="{% static 'images/icon/air/air1.png' %}"  align = "left"></div>
+            <div class="heading"><code> <h2 style="color:#0dcaf0">Air Quality</h2> </code> </div>
+            <div id="aq" class="info"><span id="aq_text" class="node_values"></span></div> 
+        </div>
+
+        <div class="leftbox2">
+            <div class="logo"><img class="icon" src="{% static 'images/icon/weather/we1.png' %}" align = "left"></div>
+            <div class="heading"> <code> <h2 style="color:#0dcaf0">Weather</h2> </code> </div>
+            <div id="we" class="info"><span id="we_text" class="node_values"></span></div> 
+        </div>
+
+        <div class="rightbox1">
+            <div class="logo"><img class="icon" src="{% static 'images/icon/solar/sl1.png' %}" align = "left"></div>
+            <div class="heading"> <code><h2 style="color:#0dcaf0">Solar Energy</h2>  </code> </div>
+            <div id="sl" class="info"><p><span id="sl_text" class="node_values"></span></p></div> 
+        </div>
+
+        <div class="rightbox2"> 
+            <div class="logo"><img class="icon" src="{% static 'images/icon/water/wd1.png' %}" align = "left"></div>
+            <div class="heading"> <code><h2 style="color:#0dcaf0">Water Quality</h2>  </code> </div>
+            <div id="wd" class="info"><span id="wd_text" class="node_values"></span></div> 
+        </div>
+
+        <div class="rightbox3"> 
+            <div class="logo"><img class="icon" src="{% static 'images/icon/water/wf1.png' %}" align = "left"></div>
+            <div class="heading"> <code><h2 style="color:#0dcaf0">Water Usage</h2> </code> </div>
+            <div id="wf" class="info"><span id="wf_text" class="node_values"></span></div> 
+        </div>
+
+        <div class="logobox"> 
+            <div class="logodiv">
+                <img src="{% static 'images/smartCity_livingLab.png' %}" class="center">
+            </div> 
+        </div>
+
+        <div class="statsbox">
+            <code><h1 style="color:#f05e30"> Deployment</h1> <p class="nodes-deployed"></p></code>
+	    <div float="left" ><pre> <span id="stats_nodes"></span ></pre></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

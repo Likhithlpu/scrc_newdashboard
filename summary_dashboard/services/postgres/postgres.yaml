@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+    postgres-db:
+        image: postgis/postgis
+        ports:
+            - 5432:5432
+        volumes:
+            - postgres_data_new:/var/lib/postgresql
+        environment:
+            - POSTGRES_PASSWORD=smart@password
+            - POSTGRES_DB=smartdb-test
+            - POSTGRES_USER=postgres
+        restart: "on-failure"
+
+volumes:
+    postgres_data_new:

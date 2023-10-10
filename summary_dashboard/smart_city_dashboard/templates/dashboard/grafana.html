@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_chatbot.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" href="{% static 'images/smartCity_livingLab.png' %}">
+    <link rel="icon" href="{% static 'images/chatbot_logo.png' %}">
+    <link rel="icon" href="{% static 'images/chatbot_avatar.png' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        .link {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    </style>
+    <script>
+        window.setInterval("reloadIFrame();", 10 * 60000);
+
+        function reloadIFrame() {
+            document.getElementById("frame").src =
+                "https://smartcitylivinglab.iiit.ac.in/grafana/d/kyLuJXQ7z/summary_view?kiosk&autofitpanels&orgId=1";
+        }
+
+        $(document).ready(function () {
+            iframe = document.getElementById("frame");
+            navbar = document.getElementById("navbar");
+            navbar_height = navbar.clientHeight;
+            iframe.height = $(window).height() - navbar_height;
+            iframe.width = $(window).width();
+            iframe.src = "https://smartcitylivinglab.iiit.ac.in/grafana/d/kyLuJXQ7z/summary_view?kiosk&autofitpanels&orgId=1";
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark"
+        style="width: 100%; z-index: 9999; position: relative; background-color: #123462; color: #ffffff; padding: 1vh;">
+        <div id="navbar" class="container-fluid">
+            <a class="navbar-brand " href="/home" style="color: #ffffff; padding-left:10px;">
+                <div style='display:flex'>
+                    <img src="{% static 'images/smartCity_livingLab.png' %}" height="50" border: 10px;>
+                    <h2 id="title" style='margin-left:1vw'>
+                        Dashboard
+                    </h2>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="d-flex"> <!-- Add d-flex class here -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown btnstyle">
+                            <a class="nav-link dropdown-toggle" href="#" id="currentviewtypehome" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                SUMMARY VIEW
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink"
+                                id="listofviewshome">
+                                <a class="dropdown-item" href="#" id="map_view_home">MAP VIEW</a>
+                                <a class="dropdown-item" href="#" id="building_view_home">BUILDING VIEW</a>
+                                <a class="dropdown-item" href="/home" id="grafana_view_home">SUMMARY VIEW</a>
+                                <a class="dropdown-item" href="#" id="3d_view">3D VIEW</a>
+                                <!-- <a class="dropdown-item" href="/wisun_view">WISUN DEPLOYMENT</a> -->
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown btnstyle">
+                            <a class="nav-link dropdown-toggle" href="#" id="currentviewtypehome" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bars"></i> <!-- Replace SUMMARY text with menu icon -->
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink"
+                                id="listofviewshome">
+                                <a class="dropdown-item"
+                                    href="https://smartcitylivinglab.iiit.ac.in/wisun_dashboard">WISUN NETWORK VIEW</a>
+                                <a class="dropdown-item" style="pointer-events: none; cursor: default;" href="#" id="building_view_home">ANALYTICAL VIEW</a>
+                                <a class="dropdown-item" style="pointer-events: none; cursor: default;" href="#" id="grafana_view_home">MAINTENANCE VIEW</a>
+                                <!-- <a class="dropdown-item" href="/wisun_view">WISUN DEPLOYMENT</a> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <iframe id="frame"
+        src="https://smartcitylivinglab.iiit.ac.in/grafana/d/kyLuJXQ7z/summary_view?kiosk&autofitpanels&orgId=1"
+        frameborder="0">
+    </iframe>
+    <!-- <div class="container"> -->
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="{% static 'images/chatbot_logo.png' %}">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">SCRC Chat Assistant</h4>
+                        <p class="chatbox__description--header">Hi. My name is Skye. How can I help you?</p>
+                    </div>
+                    <div class="chatbox__content--header">
+                        <button class="minimize-btn">
+                        <span class="circle"></span>
+                        <span class="symbol">-</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="chatbox__messages"  id="messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input id="input" type="text" placeholder="Write a message...">
+                    
+                    <!-- <button id="messages" class="chatbox__send--footer send__button" onclick="sendMessage()">Send</button>
+         -->
+                    <button class="chatbox__send--footer send__button" id="sendButton">Send</button>
+    
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="{% static 'images/chatbot_avatar.png' %}"></button>
+            </div>
+        </div>
+    <!-- </div> -->
+
+    <script type="module" src="{% static 'js/conversation_chatbot.js' %}"></script>
+    <script type="module" src="{% static 'js/constants_chatbot.js' %}"></script>
+    <script type="module" src="{% static 'js/index_chatbot.js' %}"></script>
+</body>
+
+</html>

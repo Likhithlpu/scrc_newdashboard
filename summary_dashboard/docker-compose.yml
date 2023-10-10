@@ -1,0 +1,43 @@
+version: "3.9"
+services:
+
+    postgis-db:
+        image: postgis/postgis
+        volumes:
+            - vol-db:/var/lib/postgresql
+        env_file:
+            - .env
+        restart: on-failure
+
+    message-broker:
+        image: redis:7.0-alpine
+        command: redis-server --save 20 1 --loglevel warning
+        volumes:
+            - cache:/data
+        restart: on-failure
+
+    dashboard:
+        build: .
+        volumes:
+            - vol-static:/workspace/storage/
+        env_file:
+            - .env
+        environment:
+            - POSTGRES_HOST=postgis-db
+        restart: on-failure
+        ports:
+            - 8000:9001
+        depends_on:
+            - postgis-db
+
+    dashboard-huey:
+        build: .
+        command: python smart_city_dashboard/manage.py run_huey
+        depends_on:
+            - dashboard
+
+volumes:
+    cache:
+        driver: local
+    vol-static:
+    vol-db:
